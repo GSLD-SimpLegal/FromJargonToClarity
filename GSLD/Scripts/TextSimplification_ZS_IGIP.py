@@ -1,3 +1,30 @@
+"""
+This script implements a legal text simplification pipeline using large language models.
+It supports both zero-shot (ZS) and Iterative Guided Improvement Prompting (IGIP) strategies
+to generate simplified versions of legal paragraphs at different readability levels.
+
+The system allows:
+- Multiple simplification granularities (G1, G2, G3) targeting increasing levels of simplicity.
+- Optional use of document-level memory to provide contextual information during generation.
+- Single-pass generation (ZS) and fixed multi-iteration generation (IGIP).
+- Efficient inference using 4-bit quantized LLaMA-based models.
+
+Input:
+- A JSONL file containing legal paragraphs and optional document memory.
+
+Output:
+- An Excel file with original and simplified text (or multiple iterative outputs for IGIP).
+
+Key Features:
+- Prompt-controlled readability targets using Flesch Reading Ease guidance.
+- Batched paragraph processing with length filtering.
+- HuggingFace Transformers and BitsAndBytes-based low-memory inference.
+- Configurable generation settings through command-line arguments.
+
+This script is intended for large-scale legal simplification experiments and benchmarking
+under different prompting strategies and context settings.
+"""
+
 import numpy as np
 import pandas as pd
 import json
