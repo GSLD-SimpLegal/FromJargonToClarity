@@ -39,6 +39,8 @@ This directory contains all training, inference, and generation pipelines used f
 | run_DPOInference.sh       | Runs batch inference using trained DPO model  |
 | run_TextSimplification.sh | Executes zero-shot and IGIP-based simplification experiments |
 
+## All required Python packages and versions are listed in the provided requirements.txt file.
+
 ## Recommended Execution Workflow
 
 The typical experimental workflow for graded legal text simplification follows three main stages:
