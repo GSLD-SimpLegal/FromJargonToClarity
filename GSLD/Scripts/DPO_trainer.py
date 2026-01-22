@@ -1,3 +1,32 @@
+"""
+This script trains a graded legal text simplification model using Direct Preference
+Optimization (DPO). It fine-tunes a quantized causal language model with LoRA adapters
+to align generation behavior with human preference data.
+
+The training setup supports three simplification proficiency levels:
+- Skilled: Improves readability while preserving formal legal terminology.
+- Intermediate: Simplifies vocabulary and sentence structure for semi-expert readers.
+- Basic: Produces highly simplified output for non-legal audiences.
+
+Key Components:
+- Preference-based training using (prompt, chosen, rejected) triplets.
+- Parameter-efficient fine-tuning with LoRA adapters.
+- Memory-efficient 4-bit quantized model loading.
+- Automatic dataset filtering based on token length constraints.
+- HuggingFace TRL DPOTrainer for stable preference optimization.
+
+Input:
+- A JSONL dataset containing original legal text, preferred simplifications, and
+  non-preferred alternatives.
+
+Output:
+- A trained PEFT adapter checkpoint.
+- Automatically pushed model and tokenizer artifacts to the HuggingFace Hub.
+
+This script is intended for training controllable legal simplification models using
+human-aligned preference learning and is designed for scalable experimentation across
+multiple simplification grades.
+"""
 import os
 import json
 import argparse
