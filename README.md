@@ -17,7 +17,7 @@ Contains all model-generated legal text simplifications across different grade l
 Contains human-vetted gold-standard simplifications for different grade levels.
 
 #### GSLD/Data/SimpLegal-Synth
-This synthetic dataset is created by pairing each rejected simplification with a randomly sampled accepted simplification of the same source paragraph. This design increases coverage of diverse failure cases while reducing the risk of overfitting to narrow error patterns.
+This synthetic dataset is constructed by pairing each rejected simplification with a randomly sampled accepted simplification from the same source paragraph. This strategy increases coverage of diverse failure cases while reducing the risk of overfitting to narrow error patterns. The dataset includes both training and test preference data for all three grades, Skilled, Intermediate, and Basic. The training files are provided in a compressed format.
 
 ## Scripts Structure
 
