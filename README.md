@@ -28,16 +28,16 @@ This directory contains all training, inference, and generation pipelines used f
 | Script Name                  | Description                                                                 |
 |-----------------------------|-----------------------------------------------------------------------------|
 | DPO_trainer.py              | Trains a graded legal simplification model using Direct Preference Optimization (DPO) with LoRA-based parameter-efficient fine-tuning |
-| DPO_Inference.py            | Runs inference using a trained DPO-aligned PEFT adapter to generate simplified legal text |
+| DPO_Inference.py            | Runs inference using a trained DPO-aligned model to generate simplified legal text |
 | TextSimplification_ZS_IGIP.py| Implements zero-shot (ZS) and Iterative Guided Improvement Prompting (IGIP) strategies for legal text simplification |
 
 
 ### Shell Scripts
 | Script Name               | Description                                      |
 |---------------------------|--------------------------------------------------|
-| run_TextSimplification.sh | Executes zero-shot and IGIP-based simplification experiments |
-| run_DPOInference.sh       | Runs batch inference using trained DPO adapters  |
 | run_DPOtrain.sh           | Executes DPO training for graded legal simplification |
+| run_DPOInference.sh       | Runs batch inference using trained DPO model  |
+| run_TextSimplification.sh | Executes zero-shot and IGIP-based simplification experiments |
 
 ## Recommended Execution Workflow
 
@@ -47,7 +47,7 @@ The typical experimental workflow for graded legal text simplification follows t
    Use `DPO_trainer.py` (or `run_DPOtrain.sh`) to fine-tune the base language model with preference data for a target simplification grade.
 
 2. **Run DPO-Based Inference**  
-   Use `DPO_Inference.py` (or `run_DPOInference.sh`) to generate simplified outputs using the trained PEFT adapter.
+   Use `DPO_Inference.py` (or `run_DPOInference.sh`) to generate simplified outputs using the Direct Preference Optimization.
 
 3. **Run Prompt-Based Baselines**  
    Use `TextSimplification_ZS_IGIP.py` (or `run_TextSimplification.sh`) to generate zero-shot and IGIP baseline outputs for comparison.
