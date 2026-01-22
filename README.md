@@ -39,5 +39,20 @@ This directory contains all training, inference, and generation pipelines used f
 | run_DPOInference.sh       | Runs batch inference using trained DPO adapters  |
 | run_DPOtrain.sh           | Executes DPO training for graded legal simplification |
 
+## Recommended Execution Workflow
 
+The typical experimental workflow for graded legal text simplification follows three main stages:
+
+1. **Train the DPO Model**  
+   Use `DPO_trainer.py` (or `run_DPOtrain.sh`) to fine-tune the base language model with preference data for a target simplification grade.
+
+2. **Run DPO-Based Inference**  
+   Use `DPO_Inference.py` (or `run_DPOInference.sh`) to generate simplified outputs using the trained PEFT adapter.
+
+3. **Run Prompt-Based Baselines**  
+   Use `TextSimplification_ZS_IGIP.py` (or `run_TextSimplification.sh`) to generate zero-shot and IGIP baseline outputs for comparison.
+
+This workflow enables direct comparison between prompt-based methods and preference-optimized models.
+
+---
 
