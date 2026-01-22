@@ -8,9 +8,9 @@ Contains all model-generated legal text simplifications across different grade l
 
 | Grade Level   | File Path                                                         |
 |---------------|-------------------------------------------------------------------|
-| Basic         | GSLD/Data/AllGenerationData/Basic_grade_generatedSimplifications.xlsx |
-| Intermediate  | GSLD/Data/AllGenerationData/Intermediate_grade_generatedSimplifications.xlsx |
-| Skilled       | GSLD/Data/AllGenerationData/Skilled_grade_generatedSimplifications.xlsx |
+| Basic         | AllGenerationData/Basic_grade_generatedSimplifications.xlsx |
+| Intermediate  | AllGenerationData/Intermediate_grade_generatedSimplifications.xlsx |
+| Skilled       | AllGenerationData/Skilled_grade_generatedSimplifications.xlsx |
 
 
 #### GSLD/Data/SimpLegal-Pref
