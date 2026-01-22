@@ -7,13 +7,13 @@ Code Base and Dataset for our manuscript titled "From Jargon to Clarity: Bridgin
 Contains all model-generated legal text simplifications across different grade levels:
 
 - **Basic Grade**  
-  `Data/AllGenerationData/Basic_grade_generatedSimplifications.xlsx`
+  `GSLD/Data/AllGenerationData/Basic_grade_generatedSimplifications.xlsx`
 
 - **Intermediate Grade**  
-  `Data/AllGenerationData/Intermediate_grade_generatedSimplifications.xlsx`
+  `GSLD/Data/AllGenerationData/Intermediate_grade_generatedSimplifications.xlsx`
 
 - **Skilled Grade**  
-  `Data/AllGenerationData/Skilled_grade_generatedSimplifications.xlsx`
+  `GSLD/Data/AllGenerationData/Skilled_grade_generatedSimplifications.xlsx`
 
 #### Data/SimpLegal-Pref
 Contains human-vetted gold-standard simplifications for different grade levels.
