@@ -1,3 +1,23 @@
+"""
+This script performs inference for a DPO-trained legal text simplification model.
+It loads a base causal language model together with a PEFT (LoRA/DPO) adapter and
+generates simplified versions of legal paragraphs at different proficiency levels.
+
+The system supports three graded simplification settings:
+- Skilled: Preserves legal terminology while improving clarity and structure.
+- Intermediate: Simplifies vocabulary and sentence structure for semi-expert readers.
+- Basic: Produces highly simplified output for non-legal audiences.
+
+Input:
+- A JSONL file containing original legal text along with preferred and non-preferred
+  reference simplifications used during DPO training.
+
+Output:
+- CSV and Excel files containing the original text, human-preferred reference output,
+  and the model-generated simplification.
+"""
+
+
 import argparse
 import json
 import torch
